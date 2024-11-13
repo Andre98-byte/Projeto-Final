@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+  <!-- cabeçalho -->
   <header class="container">
     <div class="logo_titulo">
       <img src="img/logo_transparente.png" alt="logo_transparente" class="img-fluid">
@@ -26,6 +26,7 @@
     </div>
   </header>
 
+  <!-- Corpo -->
   <section class="container">
     <div class="row">
       <div class="col-4"></div>
@@ -33,10 +34,21 @@
 
         <div class="box-input">
           <label for="title">
-            <h4> Número de Instalação</h4><span class="required-field"></span>
+            <h4> Selecione opção a baixo <span class="required-field"></span></h4>
           </label>
-          <input type="text-number" name="title" id="price" class="form-control"
-            placeholder="Informe o Número de Instalação" minlength="1" maxlength="35" required />
+          <div class="box-input">
+            <input type="radio" id="numero" name="gear" value="1" />
+            <label for="numero">Número de Instalação</label>
+            &nbsp;&nbsp;
+            <input type="radio" id="cpf" name="gear" value="2" />
+            <label for="cpf">CPF</label>
+            &nbsp;&nbsp;
+            <input type="radio" id="rg" name="gear" value="3" />
+            <label for="rg">RG</label>
+
+          </div>
+          <input type="text-number" name="title" id="documento" class="form-control"
+            placeholder="Informe o Número de Instalação" minlength="1" maxlength="10" required />
         </div>
 
         <div class="box-input">
@@ -44,7 +56,7 @@
             <h4> CEP</h4> <span class="required-field"></span>
           </label>
           <input type="text-number" name="title" id="price" class="form-control" placeholder="Informe o CEP"
-            minlength="1" maxlength="35" required />
+            minlength="1" maxlength="8" required />
         </div>
 
         <div class="container">
@@ -75,11 +87,47 @@
     </div>
   </section>
 
+  <!-- Roda pé -->
   <footer class="container">
     <h2>
       A solução elétrica que você precisa, quando você precisa!
     </h2>
   </footer>
+
+  <script>
+
+    function verificarRadio() {
+      let tipoDoc = document.querySelector('input[name="gear"]:checked').value;
+      if (tipoDoc == '1') {
+        document.querySelector('#documento').placeholder = "Informe Número de Instalação";
+        document.querySelector('#documento').maxLength = '10';
+        document.querySelector('#documento').value = '';
+
+      }
+      if (tipoDoc == '2') {
+        document.querySelector('#documento').placeholder = "Informe o CPF";
+        document.querySelector('#documento').maxLength = '11';
+        document.querySelector('#documento').value = '';
+      }
+      if (tipoDoc == '3') {
+        document.querySelector('#documento').placeholder = "Informe o RG";
+        document.querySelector('#documento').maxLength = '8';
+        document.querySelector('#documento').value = '';
+      }
+    }
+
+    document
+      .querySelector('#numero')
+      .addEventListener('click', verificarRadio);
+    document
+      .querySelector('#cpf')
+      .addEventListener('click', verificarRadio);
+    document
+      .querySelector('#rg')
+      .addEventListener('click', verificarRadio);
+
+  </script>
+
 
 </body>
 

@@ -1,28 +1,35 @@
 body {
-    background-image:url("../img/fundo_principal.png");
+    background-image: url("../img/fundo_principal.png");
     background-repeat: no-repeat;
     background-size: 1980px;
-     
+
 }
-.container{
+
+.container {
     text-align: center;
-    color: #444;
+    color: #333;
     padding: 20px;
 }
-h1{
+
+h1 {
     display: inline;
 }
-.logo_titulo{
+
+.logo_titulo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-h4{
+
+h4 {
     margin-top: 15px;
 }
-.confirmar{
+
+.confirmar {
     margin-top: 20px;
 }
-h2{
-    color: #000;;
+
+h2 {
+    color: #000;
+    ;
 }
