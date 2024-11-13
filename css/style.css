@@ -1,0 +1,28 @@
+body {
+    background-image:url("../img/fundo_principal.png");
+    background-repeat: no-repeat;
+    background-size: 1980px;
+     
+}
+.container{
+    text-align: center;
+    color: #444;
+    padding: 20px;
+}
+h1{
+    display: inline;
+}
+.logo_titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h4{
+    margin-top: 15px;
+}
+.confirmar{
+    margin-top: 20px;
+}
+h2{
+    color: #000;;
+}
